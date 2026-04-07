@@ -16,6 +16,12 @@ import {
   Star
 } from 'lucide-react';
 import { cn } from './lib/utils';
+import heroImage from './lib/images/caption.jpg';
+import lodgingImage from './lib/images/signaturebyrockwilliam-67.jpg';
+import restaurantImage from './lib/images/1024-Bar_CRLX4838-HDR1.jpg';
+import massageImage from './lib/images/maxresdefault.jpg';
+import nature1Image from './lib/images/DSC7487-scaled.jpg';
+import nature2Image from './lib/images/chinese-mix.jpg';
 
 const NAV_LINKS = [
   { name: 'Lodging', href: '#lodging' },
@@ -32,7 +38,7 @@ const SERVICES = [
     description: 'Experience serenity in our eco-conscious suites, where nature meets comfort. Each room is designed to harmonize with the surrounding landscape.',
     longDescription: 'Our suites are more than just a place to sleep; they are a sanctuary. Built using sustainable local materials, each unit features large panoramic windows that bring the outside in. Enjoy private terraces, outdoor showers, and custom-made furniture by local artisans.',
     icon: Bed,
-    image: './src/lib/images/signaturebyrockwilliam-67.jpg',
+    image: lodgingImage,
     gallery: [
       'https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1000',
@@ -56,7 +62,7 @@ const SERVICES = [
     description: 'A culinary journey through local flavors. Our farm-to-table approach ensures every dish is a celebration of the earth\'s bounty.',
     longDescription: 'Our kitchen is the heart of Terra Santa. We work exclusively with local farmers to source organic, seasonal ingredients. Our bar features a curated selection of natural wines and craft cocktails infused with herbs from our own garden.',
     icon: Utensils,
-    image: './src/lib/images/1024-Bar_CRLX4838-HDR1.jpg',
+    image: restaurantImage,
     gallery: [
       'https://images.unsplash.com/photo-1628143460432-0f0476483472?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&q=80&w=1000',
@@ -81,7 +87,7 @@ const SERVICES = [
     description: 'Rejuvenate your body and soul with our signature treatments. Our therapists use organic oils and ancient techniques to restore balance.',
     longDescription: 'Escape to our outdoor spa pavilion, surrounded by the sounds of nature. We offer a range of treatments from deep tissue massage to aromatherapy and hot stone therapy, all designed to release tension and promote deep relaxation.',
     icon: Sparkles,
-    image: './src/lib/images/maxresdefault.jpg',
+    image: massageImage,
     gallery: [
       'https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&q=80&w=1000',
       'https://images.unsplash.com/photo-1544161515-4af6b1d462c2?auto=format&fit=crop&q=80&w=1000',
@@ -244,10 +250,9 @@ export default function App() {
           className="absolute inset-0 z-0"
         >
           <img 
-            src="./src/lib/images/caption.jpg" 
+            src={heroImage} 
             alt="Ghana Resort Landscape" 
             className="w-full h-full object-cover"
-            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/20 to-terra-cream/10" />
         </motion.div>
@@ -593,17 +598,15 @@ export default function App() {
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             <motion.img 
               whileHover={{ scale: 1.05 }}
-              src="./src/lib/images/DSC7487-scaled.jpg" 
+              src={nature1Image} 
               alt="Nature 1" 
               className="rounded-2xl aspect-[3/4] object-cover mt-8 md:mt-12 shadow-2xl"
-              referrerPolicy="no-referrer"
             />
             <motion.img 
               whileHover={{ scale: 1.05 }}
-              src="./src/lib/images/chinese-mix.jpg" 
+              src={nature2Image} 
               alt="Nature 2" 
               className="rounded-2xl aspect-[3/4] object-cover shadow-2xl"
-              referrerPolicy="no-referrer"
             />
           </div>
         </div>
