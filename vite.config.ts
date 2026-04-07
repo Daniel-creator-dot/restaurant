@@ -20,5 +20,19 @@ export default defineConfig(({mode}) => {
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.
       hmr: process.env.DISABLE_HMR !== 'true',
     },
+    build: {
+      // Preserve image quality during build
+      rollupOptions: {
+        output: {
+          // Disable aggressive image compression
+          assetFileNames: (assetInfo) => {
+            if (/\.(gif|jpg|jpeg|png|svg|webp|ico)$/i.test(assetInfo.name ?? '')) {
+              return 'assets/images/[name]-[hash][extname]';
+            }
+            return 'assets/[name]-[hash][extname]';
+          },
+        },
+      },
+    },
   };
 });
